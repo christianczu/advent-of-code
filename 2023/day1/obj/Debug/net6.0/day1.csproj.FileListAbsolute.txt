@@ -1,0 +1,15 @@
+D:\Desktop\advent-of-code\2023\day1\bin\Debug\net6.0\day1.exe
+D:\Desktop\advent-of-code\2023\day1\bin\Debug\net6.0\day1.deps.json
+D:\Desktop\advent-of-code\2023\day1\bin\Debug\net6.0\day1.runtimeconfig.json
+D:\Desktop\advent-of-code\2023\day1\bin\Debug\net6.0\day1.dll
+D:\Desktop\advent-of-code\2023\day1\bin\Debug\net6.0\day1.pdb
+D:\Desktop\advent-of-code\2023\day1\obj\Debug\net6.0\day1.csproj.AssemblyReference.cache
+D:\Desktop\advent-of-code\2023\day1\obj\Debug\net6.0\day1.GeneratedMSBuildEditorConfig.editorconfig
+D:\Desktop\advent-of-code\2023\day1\obj\Debug\net6.0\day1.AssemblyInfoInputs.cache
+D:\Desktop\advent-of-code\2023\day1\obj\Debug\net6.0\day1.AssemblyInfo.cs
+D:\Desktop\advent-of-code\2023\day1\obj\Debug\net6.0\day1.csproj.CoreCompileInputs.cache
+D:\Desktop\advent-of-code\2023\day1\obj\Debug\net6.0\day1.dll
+D:\Desktop\advent-of-code\2023\day1\obj\Debug\net6.0\refint\day1.dll
+D:\Desktop\advent-of-code\2023\day1\obj\Debug\net6.0\day1.pdb
+D:\Desktop\advent-of-code\2023\day1\obj\Debug\net6.0\day1.genruntimeconfig.cache
+D:\Desktop\advent-of-code\2023\day1\obj\Debug\net6.0\ref\day1.dll

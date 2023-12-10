@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "uuPU2v4gmmL9qtj2K/lQS5cJ9EBDmozqPosgtDLUfYoz2altmzzdpMnnEkkLn3unjn95iadC3EAcmePQ5ToTcg==",
+  "dgSpecHash": "H4Sd0NUd0oKwur5ayU67vuRoWcTnLkoSqo1wyDBaKnuHv+mc1pihs8Bj4/VYtpZwyVk64rcVRCLwhnWLIyBHBw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\chris\\Desktop\\advent-of-code\\2023\\day1\\day1.csproj",
+  "projectFilePath": "D:\\Desktop\\advent-of-code\\2023\\day1\\day1.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

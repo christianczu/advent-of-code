@@ -17,43 +17,58 @@ namespace day2
     {
         static void Main(string[] args)
         {
+            var r = new List<int>();
+            var g = new List<int>();
+            var b = new List<int>(); 
+            var knownNumber = new List<int>();
             char[] color = { 'r', 'g', 'b' };
             var numbers = new List<int>();
-            var lines = File.ReadLines("D:\\Desktop\\advent-of-code\\2023\\day2\\input1_example.txt");
+            var lines = File.ReadLines("C:\\Users\\chris\\Desktop\\advent-of-code\\2023\\day2\\input1_example.txt");
             foreach (var line in lines)
             {
-                int gameId = Convert.ToInt32(line.Substring(line.IndexOf(' ') + 1, line.IndexOf(':') - line.IndexOf(' ') - 1));
-                var r = new List<int>();
-                var g = new List<int>();
-                var b = new List<int>();
-                foreach (char c in color)
+                string lineNoHeader = line.Split(":")[1];
+                string header = line.Split(":")[0];
+
+                int gameId = Convert.ToInt32(header.Split(" ")[1]);
+                foreach (var lineSplit in lineNoHeader.Split(";"))
                 {
-                    string pattern = $@"\b{Regex.Escape(c.ToString())}\w+";
-                    foreach (Match match in Regex.Matches(line, pattern))
+                    foreach (char c in color)
                     {
-                         switch (c)
+                        string pattern = $@"\b{Regex.Escape(c.ToString())}\w+";
+                        foreach (Match match in Regex.Matches(lineSplit, pattern))
                         {
-                            case 'r':
-                                Console.Write(line.Substring(match.Index - 3, 3));
-                                r.Add(Convert.ToInt32(line.Substring(match.Index - 3, 3)));
-                                break;
-                            case 'g':
-                                g.Add(Convert.ToInt32(line.Substring(match.Index - 3, 3)));
-                                break;
-                            case 'b':
-                                b.Add(Convert.ToInt32(line.Substring(match.Index - 3, 3)));
-                                break;
+                            switch (c)
+                            {
+                                case 'r':
+                                    r.Add(Convert.ToInt32(lineSplit.Substring(match.Index - 3, 3)));
+                                    break;
+                                case 'g':
+                                    g.Add(Convert.ToInt32(lineSplit.Substring(match.Index - 3, 3)));
+                                    break;
+                                case 'b':
+                                    b.Add(Convert.ToInt32(lineSplit.Substring(match.Index - 3, 3)));
+                                    break;
+                            }
                         }
                     }
                 }
-                if (r.Sum() <= 12 && g.Sum() <= 13 && b.Sum() <= 14)
-                {
-                    numbers.Add(gameId);
-                }
+
+                Console.WriteLine(r.Where(x => x < 12));
+                Console.WriteLine(r.Any(x => x < 12));
                 
+                if (r.Any(x => x < 12) && g.Any(y => y < 13) && b.Any(z => z < 14))
+                {
+                    if (!numbers.Contains(gameId)) {
+                            Console.WriteLine(gameId);
+                            numbers.Add(gameId);
+                    }
+                }
+                r.Clear();
+                g.Clear();
+                b.Clear();
             }
 
-            //Console.WriteLine(numbers.Sum());
+            Console.WriteLine(numbers.Sum());
             Console.Read();
         }
     }
